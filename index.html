@@ -9,14 +9,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
- 
+
     body {
       background: #0a0a0a;
       color: #e8e4dc;
       font-family: 'Syne', sans-serif;
       min-height: 100vh;
     }
- 
+
     /* NAV */
     nav {
       display: flex;
@@ -43,7 +43,7 @@
       transition: color 0.2s;
     }
     .nav-links a:hover { color: #e8e4dc; }
- 
+
     /* HERO */
     .hero {
       padding: 80px 48px 64px;
@@ -113,14 +113,14 @@
       border-color: rgba(74,222,128,0.2);
       color: rgba(74,222,128,0.7);
     }
- 
+
     /* DIVIDER */
     .divider {
       height: 0.5px;
       background: rgba(255,255,255,0.07);
       margin: 0 48px;
     }
- 
+
     /* SECTION */
     .section { padding: 56px 48px; }
     .section-label {
@@ -131,7 +131,7 @@
       text-transform: uppercase;
       margin-bottom: 28px;
     }
- 
+
     /* PROJECTS */
     .projects {
       display: grid;
@@ -179,7 +179,7 @@
       border-radius: 3px;
       padding: 3px 8px;
     }
- 
+
     /* STACK */
     .stack-grid {
       display: grid;
@@ -213,7 +213,9 @@
     .sc-blue    { color: rgba(100,170,255,0.75); background: rgba(100,170,255,0.06); border-color: rgba(100,170,255,0.18); }
     .sc-amber   { color: rgba(251,191,36,0.75);  background: rgba(251,191,36,0.06);  border-color: rgba(251,191,36,0.18); }
     .sc-purple  { color: rgba(167,139,250,0.75); background: rgba(167,139,250,0.06); border-color: rgba(167,139,250,0.18); }
- 
+    .sc-red     { color: rgba(248,113,113,0.75); background: rgba(248,113,113,0.06); border-color: rgba(248,113,113,0.18); }
+    .sc-teal    { color: rgba(45,212,191,0.75);  background: rgba(45,212,191,0.06);  border-color: rgba(45,212,191,0.18); }
+
     /* CONTACT */
     .contact-row { display: flex; gap: 12px; margin-top: 8px; flex-wrap: wrap; align-items: center; }
     .contact-btn {
@@ -241,7 +243,7 @@
       border-color: rgba(10,102,194,0.5);
       color: rgba(140,195,255,0.95);
     }
- 
+
     /* FOOTER */
     footer {
       padding: 28px 48px;
@@ -266,7 +268,7 @@
       transition: color 0.2s;
     }
     .footer-link:hover { color: rgba(255,255,255,0.5); }
- 
+
     @media (max-width: 600px) {
       nav, .hero, .section, .divider, footer {
         padding-left: 24px;
@@ -278,7 +280,7 @@
   </style>
 </head>
 <body>
- 
+
   <nav>
     <div class="logo">rafael-robson.dev</div>
     <div class="nav-links">
@@ -286,7 +288,7 @@
       <a href="https://www.linkedin.com/in/rafael-robson" target="_blank" rel="noopener">linkedin</a>
     </div>
   </nav>
- 
+
   <div class="hero">
     <div class="badge"><div class="dot"></div>disponível para projetos</div>
     <h1>Engenheiro<br><span>&</span> Fundador</h1>
@@ -296,13 +298,22 @@
       <span class="tag hi">LangGraph</span>
       <span class="tag hi">LangChain</span>
       <span class="tag hi">LLMOps</span>
+      <span class="tag hi">RAG</span>
+      <span class="tag hi">Claude API</span>
       <span class="tag">Python</span>
-      <span class="tag">Go</span>
+      <span class="tag">Rust</span>
+      <span class="tag">TypeScript</span>
       <span class="tag">Scala</span>
       <span class="tag">Java</span>
+      <span class="tag">Go</span>
       <span class="tag">COBOL</span>
       <span class="tag">dbt</span>
       <span class="tag">MLOps</span>
+      <span class="tag">FastAPI</span>
+      <span class="tag">React</span>
+      <span class="tag">Spring Boot</span>
+      <span class="tag">Apache Spark</span>
+      <span class="tag">Power BI</span>
       <span class="tag">AWS</span>
       <span class="tag">GCP</span>
       <span class="tag">Azure</span>
@@ -310,21 +321,23 @@
       <span class="tag">Docker</span>
     </div>
   </div>
- 
+
   <div class="divider"></div>
- 
+
   <div class="section" id="projetos">
     <div class="section-label">Projetos Selecionados</div>
     <div class="projects">
       <div class="project-card">
         <div class="proj-num">01</div>
         <div class="proj-title">DataSM</div>
-        <div class="proj-desc">Framework de agente IA de duplo cérebro para automação de engenharia de dados. Pipeline orientado a contexto com orquestração LangGraph.</div>
+        <div class="proj-desc">Framework de agente IA de duplo cérebro para automação de engenharia de dados. Pipeline orientado a contexto com orquestração LangGraph + Claude como Reviewer adversarial. Decision Layer substitui o merge por weighted-blend.</div>
         <div class="proj-tags">
           <span class="proj-tag">LangGraph</span>
+          <span class="proj-tag">Claude API</span>
           <span class="proj-tag">Python</span>
           <span class="proj-tag">dbt</span>
           <span class="proj-tag">BigQuery</span>
+          <span class="proj-tag">React</span>
         </div>
       </div>
       <div class="project-card">
@@ -341,50 +354,120 @@
       <div class="project-card">
         <div class="proj-num">03</div>
         <div class="proj-title">Chesin Bus</div>
-        <div class="proj-desc">Iniciativa brasileira de mobilidade sustentável com ônibus inteligentes de alta eficiência energética. O Vision é híbrido plug-in com biodiesel, propulsão elétrica dupla, frenagem regenerativa e geração solar. O E-Vision é 100% elétrico, zero emissões e foco urbano. Ambos usam arquitetura leve, materiais sustentáveis e IA embarcada, posicionando a Chesin Bus como proposta escalável no transporte coletivo global.</div>
+        <div class="proj-desc">Iniciativa brasileira de mobilidade sustentável com ônibus inteligentes. Vision: híbrido plug-in com biodiesel, propulsão elétrica dupla e geração solar. E-Vision: 100% elétrico, zero emissões. Ambos com IA embarcada e arquitetura leve.</div>
         <div class="proj-tags">
           <span class="proj-tag">Mobilidade</span>
-          <span class="proj-tag">Sustentabilidade</span>
-          <span class="proj-tag">Elétrico</span>
+          <span class="proj-tag">Spark</span>
+          <span class="proj-tag">IoT</span>
+          <span class="proj-tag">PostgreSQL</span>
           <span class="proj-tag">IA Embarcada</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="proj-num">04</div>
+        <div class="proj-title">Tessera</div>
+        <div class="proj-desc">The trust layer for enterprise AI agents. Detecção de ameaças multi-agente em tempo real, compliance LGPD e audit trails criptografados. Hackathon: Transforming Enterprise Through AI.</div>
+        <div class="proj-tags">
+          <span class="proj-tag">React</span>
+          <span class="proj-tag">Python</span>
+          <span class="proj-tag">LGPD</span>
+          <span class="proj-tag">Audit Chain</span>
+          <span class="proj-tag">WebSocket</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="proj-num">05</div>
+        <div class="proj-title">TokenBurners</div>
+        <div class="proj-desc">Code review automatizado por IA adversarial. Pipeline dual-agent (Reviewer + Critic) em 5 estágios com feedback em tempo real. Hackathon: AMD Developer Hackathon 2026.</div>
+        <div class="proj-tags">
+          <span class="proj-tag">React</span>
+          <span class="proj-tag">Python</span>
+          <span class="proj-tag">WebSocket</span>
+          <span class="proj-tag">AMD ROCm</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="proj-num">06</div>
+        <div class="proj-title">gemma-cli</div>
+        <div class="proj-desc">CLI em Rust com streaming, subcommands e runtime flags integrando Gemma 4 E4B via Ollama localmente. Subcommands: ask, chat, models, info.</div>
+        <div class="proj-tags">
+          <span class="proj-tag">Rust</span>
+          <span class="proj-tag">Ollama</span>
+          <span class="proj-tag">CLI</span>
         </div>
       </div>
     </div>
   </div>
- 
+
   <div class="divider"></div>
- 
+
   <div class="section" id="tecnologias">
     <div class="section-label">Tecnologias</div>
     <div class="stack-grid">
+
       <div class="stack-group">
         <div class="stack-group-label">Linguagens</div>
         <div class="stack-items">
           <span class="stack-chip sc-green">Python</span>
-          <span class="stack-chip sc-green">Go</span>
+          <span class="stack-chip sc-green">TypeScript</span>
+          <span class="stack-chip sc-green">Rust</span>
           <span class="stack-chip sc-default">Scala</span>
           <span class="stack-chip sc-default">Java</span>
+          <span class="stack-chip sc-default">Go</span>
+          <span class="stack-chip sc-default">JavaScript</span>
+          <span class="stack-chip sc-default">SQL</span>
           <span class="stack-chip sc-default">COBOL</span>
         </div>
       </div>
+
       <div class="stack-group">
-        <div class="stack-group-label">IA &amp; LLM</div>
+        <div class="stack-group-label">IA & LLM</div>
         <div class="stack-items">
           <span class="stack-chip sc-purple">LangGraph</span>
           <span class="stack-chip sc-purple">LangChain</span>
+          <span class="stack-chip sc-purple">Claude API</span>
+          <span class="stack-chip sc-purple">RAG</span>
+          <span class="stack-chip sc-purple">LLM Fine-tuning</span>
+          <span class="stack-chip sc-purple">LSTM / GRU</span>
+          <span class="stack-chip sc-purple">Codestral</span>
           <span class="stack-chip sc-purple">LLMOps</span>
           <span class="stack-chip sc-purple">MLOps</span>
         </div>
       </div>
+
       <div class="stack-group">
         <div class="stack-group-label">Dados</div>
         <div class="stack-items">
           <span class="stack-chip sc-amber">dbt</span>
-          <span class="stack-chip sc-amber">SQL</span>
+          <span class="stack-chip sc-amber">Apache Spark</span>
           <span class="stack-chip sc-amber">BigQuery</span>
-          <span class="stack-chip sc-amber">Spark</span>
+          <span class="stack-chip sc-amber">PostgreSQL</span>
+          <span class="stack-chip sc-amber">ETL / ELT</span>
+          <span class="stack-chip sc-amber">Power BI</span>
         </div>
       </div>
+
+      <div class="stack-group">
+        <div class="stack-group-label">Backend</div>
+        <div class="stack-items">
+          <span class="stack-chip sc-teal">FastAPI</span>
+          <span class="stack-chip sc-teal">Spring Boot</span>
+          <span class="stack-chip sc-teal">Node.js</span>
+          <span class="stack-chip sc-teal">REST</span>
+          <span class="stack-chip sc-teal">WebSocket</span>
+          <span class="stack-chip sc-teal">MVC</span>
+        </div>
+      </div>
+
+      <div class="stack-group">
+        <div class="stack-group-label">Frontend</div>
+        <div class="stack-items">
+          <span class="stack-chip sc-blue">React</span>
+          <span class="stack-chip sc-blue">TypeScript</span>
+          <span class="stack-chip sc-blue">HTML / CSS</span>
+        </div>
+      </div>
+
       <div class="stack-group">
         <div class="stack-group-label">Cloud</div>
         <div class="stack-items">
@@ -393,18 +476,27 @@
           <span class="stack-chip sc-blue">Azure</span>
         </div>
       </div>
+
       <div class="stack-group">
         <div class="stack-group-label">Infraestrutura</div>
         <div class="stack-items">
-          <span class="stack-chip sc-default">Terraform</span>
           <span class="stack-chip sc-default">Docker</span>
+          <span class="stack-chip sc-default">Terraform</span>
+          <span class="stack-chip sc-default">Git</span>
+          <span class="stack-chip sc-default">Linux</span>
+          <span class="stack-chip sc-default">Maven</span>
+          <span class="stack-chip sc-default">Tomcat</span>
+          <span class="stack-chip sc-default">Ollama</span>
+          <span class="stack-chip sc-default">DBUnit</span>
+          <span class="stack-chip sc-default">Selenium</span>
         </div>
       </div>
+
     </div>
   </div>
- 
+
   <div class="divider"></div>
- 
+
   <div class="section" id="contato">
     <div class="section-label">Contato</div>
     <div class="contact-row">
@@ -418,7 +510,7 @@
       </a>
     </div>
   </div>
- 
+
   <footer>
     <span class="footer-text">© 2026 — Rafael Robson</span>
     <div class="footer-links">
@@ -426,6 +518,6 @@
       <span class="footer-text">Brasília, DF</span>
     </div>
   </footer>
- 
+
 </body>
 </html>
